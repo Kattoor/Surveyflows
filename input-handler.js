@@ -18,7 +18,7 @@ document.onmousemove = event => {
     });
 
     if (splitter.dragging) {
-        toolsWindow.width = event.clientX;
+        toolsWindow.width = Math.max(115, event.clientX);
         chartWindow.left = toolsWindow.width;
         chartWindow.width = canvasWidth - toolsWindow.width;
 
