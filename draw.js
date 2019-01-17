@@ -37,7 +37,7 @@ function drawChartWindow() {
 }
 
 function drawSplitter() {
-    context.fillStyle = splitter.hovering ? splitter.onHoverColor : splitter.color;
+    context.fillStyle = splitter.hovering || splitter.dragging ? splitter.onHoverColor : splitter.color;
     context.fillRect(splitter.left, splitter.top, splitter.right - splitter.left, splitter.bottom - splitter.top);
 
     context.fillStyle = '#000';
